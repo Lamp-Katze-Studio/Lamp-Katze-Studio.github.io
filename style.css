@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Fell English SC';
+    src: url('./assets/fonts/IM_FELL_English_SC.woff') format('woff'),
+        url('./assets/fonts/IM_FELL_English_SC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Underdog';
+    src: url('./assets/fonts/Underdog-Regular.woff') format('woff'),
+        url('./assets/fonts/Underdog-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* colors */
+    --color-primary: #f5f5f5;
+    --color-secondary: #5B745A;
+    --color-tertiary: #f4f4f4;
+    --color-quaternary: #333;
+
+    /* fonts */
+    --main-font-family: 'Underdog', sans-serif;
+    --secondary-font-family: 'Fell English SC', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: var(--main-font-family);
+}
