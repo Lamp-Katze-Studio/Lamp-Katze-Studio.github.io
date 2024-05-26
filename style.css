@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-quaternary);
 }
 
-#the_team h2 {
+#the_team h1 {
     color: var(--color-secondary)
 }
 
