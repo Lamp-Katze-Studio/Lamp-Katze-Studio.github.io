@@ -9,15 +9,14 @@
     <div class="container">
         <div class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#game">Sleep Herd</a></li>
-                <li><a href="#about">Meet the Team</a></li>
+                <li><a href="#the_team">Meet the Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="content">
-            <div id="banner">
-                <!-- TODO: we're gonna need a background here, something from sleepherd gameplay -->
+            <div id="home">
                 <img class="logo" src="./assets/images/LAMPKATZ.png">
                 <div class="banner-text">
                     <p>We're a small indie studio based in Montreal. We like making cute games :3</p>
@@ -34,18 +33,39 @@
             <div id="game">
                 <!-- Visual Banner of the Game, arty -->
                 <h2>Sleep Herd</h2>
-                <p>here is a description of our game</p>
+                <p>The first ever multiplayer burtonesque puffle-like ever. Coming soon :)</p>
                 <!-- image carousel -->
                 <!-- steam link -->
             </div>
-            <div id="about">
+            <div id="the_team">
                 <h2>Meet the Team</h2>
                 <p>yo ahahaha the team here</p>
             </div>
             <div id="contact">
                 <h2>Contact Us!</h2>
                 <!-- contact form here-->
-                <p> this is where the form would be</p>
+                <form
+                action="https://formspree.io/f/mnqeyloy"
+                method="POST"
+                >
+                    <div class="contact-details">
+                        <label>
+                            Your name:
+                            <input name="name" placeholder="Bo Beep">
+                        </label>
+                        <label>
+                            Your email:
+                            <input type="email" name="email" placeholder="bobeep@katzmail.com">
+                        </label>
+                    </div>
+                    
+                    <label>
+                        Your message:
+                        <textarea name="message" placeholder="Your message here..."></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
         

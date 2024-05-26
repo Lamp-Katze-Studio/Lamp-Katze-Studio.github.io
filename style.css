@@ -31,12 +31,14 @@
 html {
     scroll-behavior: smooth;
     background-color: var(--color-secondary);
+    box-sizing: border-box;
 }
 
-* {
+*, *::before, *::after {
     font-family: var(--main-font-family);
     font-size: 1.125rem;
-    color: var(--color-primary)
+    color: var(--color-primary);
+    box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -68,27 +70,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-    padding: 2rem;
+    margin: 0 -8px;
 }
 
 .content > div {
     text-align: center;
+    padding: 2rem;
 }
 
-#banner {
+#home {
     display: flex;
     background-image: url('./assets/images/game_ss.jpg');
     background-size: cover;
     background-position: 0% 45%;
+    margin-top: 3rem;
     height: 30rem;
-    margin: 0 -44px;
-    padding: 2rem;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
-#banner > * {
+#home > * {
     width: 25vw;
 }
 
@@ -112,6 +114,59 @@ h1, h2, h3, h4, h5, h6 {
 .socials img {
     height: 2rem;
     color: white;
+}
+
+#the_team {
+    background-color: var(--color-quaternary);
+}
+
+#the_team h2 {
+    color: var(--color-secondary)
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    gap: 1rem;
+    width: 30rem;
+}
+
+#contact form > label {
+    width: 30rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input, textarea {
+    color: var(--color-quaternary);
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 15rem;
+    min-height: 5rem;
+}
+
+button {
+    background-color: var(--color-quaternary);
+    padding: 0.2rem 2rem;
+    border-radius: 0.25rem;
+    width: 10%
 }
 
 .footer {
