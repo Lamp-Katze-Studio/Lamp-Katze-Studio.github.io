@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--secondary-font-family);
     font-size: 1.75rem;
     color: var(--color-quaternary);
+    margin-top: 0;
 }
 
 .menu {
