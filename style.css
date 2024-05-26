@@ -20,7 +20,7 @@
     /* colors */
     --color-primary: #f5f5f5;
     --color-secondary: #5B745A;
-    --color-tertiary: #f4f4f4;
+    --color-tertiary: #f3fa2c;
     --color-quaternary: #333;
 
     /* fonts */
@@ -30,8 +30,72 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--color-secondary);
 }
 
 * {
     font-family: var(--main-font-family);
+    font-size: 1.125rem;
+    color: var(--color-primary)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font-family);
+    font-size: 1.75rem;
+    color: var(--color-quaternary);
+}
+
+.menu {
+    position: fixed;
+
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a:hover {
+    color: var(--color-tertiary)
+}
+
+.content {
+    padding: 2rem;
+}
+
+#banner {
+    display: flex;
+    background-image: url('./assets/images/game_ss.jpg');
+    background-size: cover;
+    background-position: 0% 49%;
+    height: 30rem;
+    margin: 2rem -44px 0 -44px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    height: 20rem;
+    background-color: #5B745A80;
+    
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    background-color: var(--color-quaternary);
+    padding: .1rem 0;
+    text-align: center;
+    margin: -8px;
 }
