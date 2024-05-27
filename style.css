@@ -151,8 +151,8 @@ h1, h2, h3, h4 {
 
 .contact-details {
     display: flex;
-    gap: 1rem;
     width: 30rem;
+    justify-content: space-between;
 }
 
 #contact form > label {
@@ -169,6 +169,7 @@ input, textarea {
     color: var(--color-quaternary);
     width: 100%;
     border-radius: 0.25rem;
+    border: 2px solid var(--color-quaternary);
     padding: 0.25rem;
     font-size: 1rem;
 }
@@ -184,6 +185,7 @@ button {
     background-color: var(--color-quaternary);
     padding: 0.2rem 2rem;
     border-radius: 0.25rem;
+    border: 2px solid var(--color-primary);
     width: 10%;
     min-width: 7rem;
 }
