@@ -84,7 +84,10 @@ h1, h2, h3, h4 {
 }
 
 #menu a:hover {
-    color: var(--color-tertiary)
+    color: var(--color-tertiary);
+    -webkit-transition: color 250ms linear;
+    -ms-transition: color 250ms linear;
+    transition: color 250ms linear;
 }
 
 .content {
@@ -93,11 +96,19 @@ h1, h2, h3, h4 {
 
 .content > div {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.content-text {
+    width: 50%;
+
 }
 
 #home {
-    display: flex;
+    flex-direction: row;
     background-image: url('./assets/images/game_ss.jpg');
     background-size: cover;
     background-position: 0% 45%;
@@ -129,9 +140,31 @@ h1, h2, h3, h4 {
     gap: 2rem;
 }
 
-.socials img {
+.socials svg {
     height: 2rem;
-    color: white;
+    fill: var(--color-primary);
+}
+
+.socials svg:hover {
+    fill: var(--color-tertiary);
+    -webkit-transition: fill 250ms ease-in-out;
+    -ms-transition: fill 250ms ease-in-out;
+    transition: fill 250ms ease-in-out;
+}
+
+.sleep-herd-banner {
+    display: flex;
+    justify-content: space-between;
+    height: 18rem;
+    width: 100%;
+    margin: -2rem -2rem 4rem -2rem;
+    box-shadow: black 0 0 2rem 2rem;
+    background-color: black;
+}
+
+.sleep-herd-banner > img {
+    margin: -1rem 0;
+    height: 100%;
 }
 
 #the_team {
@@ -152,8 +185,9 @@ h1, h2, h3, h4 {
 .contact-details {
     display: flex;
     width: 30rem;
-    justify-content: space-between;
+    gap: 1rem;
 }
+
 
 #contact form > label {
     width: 30rem;
@@ -163,6 +197,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 input, textarea {
@@ -223,9 +258,33 @@ button {
         border-radius: 8px;
     }
 
+    .sleep-herd-banner {
+        justify-content: center;
+        height: 10rem;
+        margin-bottom: 3rem;
+        box-shadow: black 0 0 1rem 1rem;
+    }
+
+    .sleep-herd-banner img {
+        margin-top: 0;
+    }
+
+    .sleep-herd-banner img:first-child,
+    .sleep-herd-banner img:last-child {
+        display: none;
+    }
+
+    p.content-text {
+        width: 80%;
+    }
+
     .contact-details {
         flex-direction: column;
         width: 100%;
+    }
+
+    #contact form {
+        width: 80%;
     }
 
     #contact form > label {
