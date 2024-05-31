@@ -30,8 +30,16 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--color-secondary);
+    background-color: var(--color-quaternary);
     box-sizing: border-box;
+}
+
+body {
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 *, *::before, *::after {
@@ -53,9 +61,7 @@ h1, h2, h3, h4 {
     position: fixed;
     top: 1rem;
     right: 1rem;
-    background-color: var(--color-secondary);
     padding: 0.8rem;
-    border: 2px solid var(--color-quaternary);
     border-radius: 0.8rem;
     width: 3rem;
     height: 3rem;
@@ -69,18 +75,32 @@ h1, h2, h3, h4 {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--color-secondary);
-    width: 100%
+    width: 100%;
+    z-index: 100;
 }
 
 #menu ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
 }
 
 #menu li {
     list-style: none;
+}
+
+#menu img {
+    height: 5rem;
+    margin: 0 1rem;
+    -webkit-filter: drop-shadow(1px 1px 1px white)
+    drop-shadow(-1px -1px 1px white);
+    filter: drop-shadow(1px 1px 1px white) 
+    drop-shadow(-1px -1px 1px white);
+}
+
+#menu a {
+    display: flex;
+    align-items: center;
 }
 
 #menu a:hover {
@@ -88,10 +108,60 @@ h1, h2, h3, h4 {
     -webkit-transition: color 250ms linear;
     -ms-transition: color 250ms linear;
     transition: color 250ms linear;
+
+    img {
+        -webkit-filter: drop-shadow(1px 1px 1px var(--color-tertiary))
+        drop-shadow(-1px -1px 1px var(--color-tertiary));
+        filter: drop-shadow(1px 1px 1px var(--color-tertiary)) 
+        drop-shadow(-1px -1px 1px var(--color-tertiary));
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    justify-content: center;
+    text-align: center;
+    z-index: 100;
+
+    * {
+        display: block;
+        margin: 2rem 0;
+    }
+}
+
+#back-to-top img {
+    height: 5rem;
+    margin: 0 1rem;
+    margin-bottom: 8px;
+    -webkit-filter: drop-shadow(1px 1px 1px white)
+    drop-shadow(-1px -1px 1px white);
+    filter: drop-shadow(1px 1px 1px white) 
+    drop-shadow(-1px -1px 1px white);
+}
+
+#back-to-top a {
+    display: inline;
+    align-items: center;
+}
+
+#back-to-top a:hover {
+    color: var(--color-tertiary);
+    -webkit-transition: color 250ms linear;
+    -ms-transition: color 250ms linear;
+    transition: color 250ms linear;
+
+    img {
+        -webkit-filter: drop-shadow(1px 1px 1px var(--color-tertiary))
+        drop-shadow(-1px -1px 1px var(--color-tertiary));
+        filter: drop-shadow(1px 1px 1px var(--color-tertiary)) 
+        drop-shadow(-1px -1px 1px var(--color-tertiary));
+    }
 }
 
 .content {
-    margin: 0 -8px;
+    width: 100%;
 }
 
 .content > div {
@@ -104,28 +174,27 @@ h1, h2, h3, h4 {
 
 p.content-text {
     width: 50%;
-
 }
 
 #home {
     flex-direction: row;
     background-image: url('./assets/images/game_ss.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 45%;
-    margin-top: 3rem;
-    height: 30rem;
+    height: 90vh;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
 #home > * {
-    width: 25vw;
+    margin-top: 5rem;
+    width: 20vw;
 }
 
 .logo {
-    background-color: #5B745A80;
-    border-radius: 40px;
+    background-color: #5B745A;
 }
 
 .banner-text {
@@ -152,18 +221,21 @@ p.content-text {
     transition: fill 250ms ease-in-out;
 }
 
+#game {
+    background-color: var(--color-secondary);
+}
+
 .sleep-herd-banner {
     display: flex;
     justify-content: space-between;
-    height: 18rem;
+    height: 26rem;
     width: 100%;
-    margin: -2rem -2rem 4rem -2rem;
-    box-shadow: black 0 0 2rem 2rem;
+    margin: -2rem -2rem 2rem -2rem;
     background-color: black;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 90%, transparent 100%);
 }
 
 .sleep-herd-banner > img {
-    margin: -1rem 0;
     height: 100%;
 }
 
@@ -188,6 +260,9 @@ p.content-text {
     gap: 1rem;
 }
 
+#contact {
+    background-color: var(--color-secondary)
+}
 
 #contact form > label {
     width: 30rem;
@@ -237,8 +312,8 @@ button {
         display: block;
     } */
 
-    #menu {
-        display: none;
+    #desktop-nav {
+        display: none !important;
     }
 
     #home {
@@ -246,7 +321,6 @@ button {
         gap: 1rem;
         margin-top: -8px;
         background-position: 65% 65%;
-        background-size: 300%;
     }
 
     #home > * {
