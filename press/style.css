@@ -68,3 +68,9 @@ h5 {
     margin: 0;
     border-color: var(--color-tertiary);
 }
+
+@media screen and (max-width: 991.98px){
+    .press-container {
+        flex-direction: column-reverse;
+    }
+}
