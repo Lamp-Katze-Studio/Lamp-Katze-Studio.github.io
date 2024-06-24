@@ -234,12 +234,12 @@ p.content-text {
     gap: 2rem;
 }
 
-.socials svg {
+a svg {
     height: 2rem;
     fill: var(--color-primary);
 }
 
-.socials svg:hover {
+a svg:hover {
     fill: var(--color-tertiary);
     -webkit-transition: fill 250ms ease-in-out;
     -ms-transition: fill 250ms ease-in-out;
@@ -252,10 +252,6 @@ p.content-text {
     margin-top: -5rem;
     h1 {
         color: white !important;
-    }
-    svg {
-        height: 2rem;
-        fill: var(--color-primary);
     }
 }
 
