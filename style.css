@@ -290,7 +290,9 @@ p.content-text {
 }
 
 .team-info {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
     justify-content: center;
     grid-template-columns: auto auto auto auto;
     gap: 2rem;
