@@ -427,6 +427,10 @@ button {
         margin-top: 0;
     }
 
+    .foreground-image {
+        display: none;
+    }
+
     .sleep-herd-banner {
         display: grid;
     }
