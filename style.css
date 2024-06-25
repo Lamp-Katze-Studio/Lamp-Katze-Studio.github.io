@@ -427,7 +427,7 @@ button {
         margin-top: 0;
     }
 
-    .foreground-image {
+    #foreground-image {
         display: none;
     }
 
