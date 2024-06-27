@@ -69,8 +69,19 @@ h5 {
     border-color: var(--color-tertiary);
 }
 
+.footer {
+    background-color: var(--color-secondary);
+}
+
 @media screen and (max-width: 991.98px){
     .press-container {
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    #sleep-herd-press  {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
