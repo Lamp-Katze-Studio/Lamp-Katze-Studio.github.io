@@ -355,6 +355,7 @@ a svg:hover {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
+    max-width: 1000px;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
