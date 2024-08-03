@@ -23,10 +23,36 @@
 	flex-direction: row;
 }
 
-.row-form input[type="checkbox"] {
-	width: auto;
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--color-primary);
 	margin-right: 1rem;
+	font: inherit;
+	color: currentColor;
+	width: 1em;
+	height: 1em;
+	border: 0.1em solid currentColor;
+	border-radius: 0.1em;
+	display: grid;
+	place-content: center;
 }
+
+input[type="checkbox"]::before {
+	content: "✔";
+	transform: scale(0);
+	transition: 100ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+	border: 0.1em solid var(--color-secondary);
+}
+
+input[type="checkbox"]:checked::before {
+	transform: scale(1);
+	color: var(--color-secondary);
+}
+  
 
 .label-description {
 	font-weight: 600;

@@ -215,7 +215,8 @@ p.content-text {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 45%;
-    height: 90vh;
+    min-height: 90vh;
+    height: fit-content;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -223,14 +224,21 @@ p.content-text {
 }
 
 #home > * {
-    margin-top: 5rem;
-    width: 20vw;
+    width: clamp(20vw, 20rem, 30vw);
     max-height: 90%;
     object-fit: contain;
 }
 
+#foreground-logo {
+    display: none;
+    max-width: 40%;
+    border-radius: 8px;
+    margin: 0;
+}
+
 .logo {
     width: 70%;
+    border-radius: 8px;
     margin: auto;
     background-color: #5B745A;
 }
@@ -304,6 +312,7 @@ a svg:hover {
 
         img {
             height: 55%;
+            opacity: 0.40;
         }
         
         img:first-child {
@@ -344,11 +353,11 @@ a svg:hover {
 }
 
 #the_team {
-    background-color: var(--color-quaternary);
+    background-color: var(--color-secondary);
 }
 
 #the_team h1 {
-    color: var(--color-secondary)
+    color: var(--color-primary)
 }
 
 .team-info {
@@ -376,6 +385,7 @@ a svg:hover {
 
 .team-member h4, .team-member p {
     margin: 0;
+    color: var(--color-quaternary)
 }
 
 #contact form {
@@ -451,10 +461,36 @@ button {
     font-size: 0.75rem;
 }
 
+@media screen and (max-width: 1199.98px) {
+    #foreground-image {
+        display: none;
+    }
+
+    #foreground-logo {
+        display: block;
+        max-width: 30%;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 991.98px){
     #menu a {
         font-size: 1.8vw;
     }
+    #back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        a {
+            font-size: .9rem;
+        }
+        img {
+            height: 4rem;
+        }
+    }
+
     .sleep-herd-banner {
         padding: 0 10vw;
     }
@@ -514,7 +550,12 @@ button {
         margin: 0;
     }
 
+    #foreground-logo {
+        display: none;
+    }
+
     #home .logo {
+        display: block;
         width: 50vw;
         border-radius: 8px;
         margin: auto;
@@ -523,10 +564,6 @@ button {
     #game {
         /* height: 50rem; */
         margin-top: 0;
-    }
-
-    #foreground-image {
-        display: none;
     }
 
     /* .sleep-herd-banner {
