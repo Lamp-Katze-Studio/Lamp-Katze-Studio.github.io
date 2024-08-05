@@ -114,6 +114,14 @@ padding: 10px;
 color: #ff0000 !important;
 }
 
+button.primary {
+	background-color: var(--color-quaternary);
+    padding: 0.2rem 2rem;
+    border-radius: 0.25rem;
+    border: 2px solid var(--color-primary);
+    min-width: 7rem;
+}
+
 @media screen and (max-width: 575.98px) {
 	.content {
 		padding-top: 1rem;

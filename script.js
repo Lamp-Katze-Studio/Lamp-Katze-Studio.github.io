@@ -1,19 +1,5 @@
-// toggle navbar menu
-function toggleMenu() {
-    var menu = document.getElementById("menu")
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-
-function closeMenu() {
-    var menu = document.getElementById("menu")
-    menu.style.display = "none";
-}
-
 function checkMenuScroll() {
+    if (window.innerWidth < 576) return;
     var menu = document.getElementById("menu");
     menu.style.opacity = 1 - window.scrollY/500;
 
@@ -31,3 +17,29 @@ function checkMenuScroll() {
 
 window.onscroll = checkMenuScroll;
 window.onload = checkMenuScroll;
+
+document.addEventListener("DOMContentLoaded", function() {
+    var menuToggleButton  = document.getElementById("menu-toggle");
+    var menu = document.getElementById("menu");
+
+    menuToggleButton.addEventListener("click", function(event) {
+        event.stopPropagation();
+        menu.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!menu.contains(event.target) && !menuToggleButton.contains(event.target)) {
+            menu.classList.remove("active");
+        }
+    });
+
+    menu.addEventListener("click", function(event) {
+        event.stopPropagation();
+    });
+
+    window.addEventListener("scroll", function() {
+        if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+        }
+    });
+});
