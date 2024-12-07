@@ -373,6 +373,11 @@ a svg:hover {
     margin-bottom: 2rem;
 }
 
+.secondary-role {
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0) !important;
+}
+
 .team-member {
     display: flex;
     flex-direction: column;
