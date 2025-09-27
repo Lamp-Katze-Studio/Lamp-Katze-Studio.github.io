@@ -447,7 +447,7 @@ button {
 
     .team-member {
         width: 6rem;
-        h4, p {
+        h4 p {
             font-size: .8rem;
         }
     }
