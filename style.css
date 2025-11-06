@@ -21,7 +21,7 @@
     --color-primary: #f5f5f5;
     --color-secondary: #5B745A;
     --color-tertiary: #f3fa2c;
-    --color-quaternary: #333;
+    --color-quaternary: black;
 
     /* fonts */
     --main-font-family: 'Underdog', sans-serif;
@@ -100,6 +100,10 @@ p.content-text {
     width: clamp(20vw, 20rem, 30vw);
     max-height: 90%;
     object-fit: contain;
+}
+
+#foreground-image {
+    max-width: 20%;
 }
 
 #foreground-logo {
@@ -230,7 +234,8 @@ a svg:hover {
 }
 
 #the_team {
-    background-color: var(--color-secondary);
+    /* background-color: var(--color-secondary); */
+    background-image: url('assets/images/wallpaper.png');
 }
 
 #the_team h1 {
